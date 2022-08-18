@@ -620,10 +620,10 @@ export class Transport extends TransportBase {
   private loadConfig(configuration: any): Configuration {
     const settings: Configuration = {
       wsServers: [{
-        scheme: "WS",
-        sipUri: "<sip:sip.yohalabs.com;transport=ws;lr>",
+        scheme: "WSS",
+        sipUri: "<sip:fti.oncall.vn;transport=wss;lr>",
         weight: 0,
-        wsUri: "ws://sip.yohalabs.com:5003",
+        wsUri: "wss://fti.oncall.vn:5065",
         isError: false
     }],
 
