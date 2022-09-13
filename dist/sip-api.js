@@ -19686,7 +19686,7 @@ var Transport = /** @class */ (function (_super) {
     };
     Transport.defaultOptions = {
         server: "",
-        connectionTimeout: 5,
+        connectionTimeout: 15,
         keepAliveInterval: 0,
         keepAliveDebounce: 10,
         traceSip: true
