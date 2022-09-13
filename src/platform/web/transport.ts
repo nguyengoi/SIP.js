@@ -1,10 +1,10 @@
-import { EventEmitter } from "events";
+import { Emitter, _makeEmitter } from "../../api/emitter";
+import { Grammar, Logger } from "../../core";
 
-import { _makeEmitter, Emitter } from "../../api/emitter";
+import { EventEmitter } from "events";
 import { StateTransitionError } from "../../api/exceptions";
 import { Transport as TransportDefinition } from "../../api/transport";
 import { TransportState } from "../../api/transport-state";
-import { Grammar, Logger } from "../../core";
 
 /**
  * Transport options.
@@ -49,7 +49,7 @@ export class Transport extends EventEmitter implements TransportDefinition {
 
   private static defaultOptions: Required<TransportOptions> = {
     server: "",
-    connectionTimeout: 5,
+    connectionTimeout: 15,
     keepAliveInterval: 0,
     keepAliveDebounce: 10,
     traceSip: true

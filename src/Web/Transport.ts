@@ -2,9 +2,10 @@ import {
   Grammar,
   Logger
 } from "../core";
-import { TypeStrings } from "../Enums";
+
 import { Exceptions } from "../Exceptions";
 import { Transport as TransportBase } from "../Transport";
+import { TypeStrings } from "../Enums";
 import { Utils } from "../Utils";
 import Websocket from "ws";
 
@@ -627,7 +628,7 @@ export class Transport extends TransportBase {
         isError: false
     }],
 
-      connectionTimeout: 5,
+      connectionTimeout: 15,
 
       maxReconnectionAttempts: 3,
       reconnectionTimeout: 4,
